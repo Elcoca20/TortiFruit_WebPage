@@ -1,0 +1,80 @@
+/* Reset básico */
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Tipografía general */
+body, h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f8f5f2;
+    color: #333;
+    padding: 1rem;
+}
+
+/* Navegación */
+.nav-tortifruit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9fde4;
+    padding: 0.5rem 2rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-logo img {
+    height: 70px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ddac79;
+}
+
+/* Adaptabilidad del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-tortifruit {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-logo img {
+        height: 60px;
+    }
+}

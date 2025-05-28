@@ -1,0 +1,203 @@
+/* Reset y base */
+body, ul, li, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body, h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+body {
+  background-color: #f8f5f2;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Navegación */
+.nav-tortifruit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9fde4; 
+  padding: 0.5rem 2rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-logo img {
+  height: 70px; /* Más grande */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ddac79;
+}
+
+@media (max-width: 768px) {
+  .nav-tortifruit {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-logo img {
+    height: 60px;
+  }
+}
+
+/* Secciones */
+.categoria {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.categoria h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem; /* Más grande */
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+.producto-familia {
+  text-align: center;
+}
+
+.producto-familia img {
+  max-width: 80%; /* Más pequeñas */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Sabores */
+.sabores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sabores li {
+  list-style: none;
+}
+
+.sabores button {
+  background-color: #6d9773;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sabores button:hover {
+  background-color: #4d7c59;
+}
+
+/* Carrito */
+.carrito {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.carrito h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding-left: 0;
+}
+
+#lista-carrito li {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-comprar {
+  background-color: #007f5f;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-comprar:hover {
+  background-color: #005f43;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav.horizontal ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sabores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-comprar {
+    font-size: 1rem;
+  }
+}
+
+
+/*PALETA DE COLORES ddac79 maron/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styls/catalogo.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-tortifruit">
+            <div class="nav-logo">
+                <img src="assets/img/Logo Tortifruit logo sin slogan.png" alt="Logo Tortifruit">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="assets/docs/conoceme.html">Conóceme</a></li>
+                <li><a href="assets/doc/Contacto.html"><strong>Chachafruto</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sección 1: Familia de Frutas Naturales -->
+        <section class="categoria">
+            <h2 style="text-align: center;">Tortas de Frutas Naturales</h2>
+            <div class="producto-familia">
+            <img src="assets/img/naturales.JPG" alt="FrutasNaturales" />
+            <ul class="sabores">
+                <li><button data-nombre="Torta de Naranja" data-precio="5000">Naranja - $5.000</button></li>
+                <li><button data-nombre="Torta de Limón" data-precio="5000">Limón - $5.000</button></li>
+                <li><button data-nombre="Torta de Piña" data-precio="5000">Piña - $5.000</button></li>
+                <li><button data-nombre="Torta de Mora" data-precio="5000">Mora - $5.000</button></li>
+                <li><button data-nombre="Torta de Guayaba" data-precio="5000">Guayaba - $5.000</button></li>
+                <li><button data-nombre="Torta de Tamarindo" data-precio="5000">Tamarindo - $5.000</button></li>
+                <li><button data-nombre="Torta de Maracuyá" data-precio="5000">Maracuyá - $5.000</button></li>
+                <li><button data-nombre="Torta de Banano" data-precio="5000">Banano - $5.000</button></li>
+                <li><button data-nombre="Torta de Brevas" data-precio="5000">Brevas - $5.000</button></li>
+                <li><button data-nombre="Torta de Plátano" data-precio="5000">Plátano - $5.000</button></li>
+            </ul>
+            </div>
+        </section>
+
+        <!-- Sección 2: Familia de Vegetales, Hierbas y Granos -->
+        <section class="categoria">
+            <h2 style="text-align: center;">Tortas de Vegetales, Hierbas y Granos</h2>
+            <div class="producto-familia">
+            <img src="assets/img/vegetales.JPG" alt="Vegetales, Hierbas y Granos" />
+            <ul class="sabores">
+                <li><button data-nombre="Torta de Zanahoria" data-precio="5000">Zanahoria - $5.000</button></li>
+                <li><button data-nombre="Torta de Yerbabuena" data-precio="5000">Yerbabuena - $5.000</button></li>
+                <li><button data-nombre="Torta de Apio" data-precio="5000">Apio - $5.000</button></li>
+                <li><button data-nombre="Torta de Albahaca" data-precio="5000">Albahaca - $5.000</button></li>
+                <li><button data-nombre="Torta de Chachafruto" data-precio="5000">Chachafruto - $5.000</button></li>
+                <li><button data-nombre="Torta de Algarroba" data-precio="5000">Algarroba - $5.000</button></li>
+                <li><button data-nombre="Torta de Macadamia" data-precio="5000">Macadamia - $5.000</button></li>
+                <li><button data-nombre="Torta de Café" data-precio="5000">Café - $5.000</button></li>
+                <li><button data-nombre="Torta de Chocolo" data-precio="5000">Chocolo - $5.000</button></li>
+            </ul>
+            </div>
+        </section>
+
+        <!-- Sección 3: Familia de Harinas Alternativas y Yuca -->
+        <section class="categoria">
+            <h2 style="text-align: center;">Familia de Harinas Alternativas y Yuca</h2>
+            <div class="producto-familia">
+            <img src="assets/img/varios.JPG" alt="Harinas y Yuca" />
+            <ul class="sabores">
+                <li><button data-nombre="Torta de Yuca y Coco" data-precio="5000">Torta de Yuca y Coco - $5.000</button></li>
+                <li><button data-nombre="Enyucado" data-precio="7000">Enyucado - $7.000</button></li>
+                <li><button data-nombre="Aborrajado" data-precio="7000">Aborrajado - $7.000</button></li>
+                <li><button data-nombre="Pan de Yuca" data-precio="7000">Pan de Yuca - $7.000</button></li>
+                <li><button data-nombre="Galleta Cuca" data-precio="7000">Galleta Cuca - $7.000</button></li>
+            </ul>
+            </div>
+        </section>
+
+        <div class="carrito">
+        <h3>Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0</span> COP</strong></p>
+        <button id="comprar" class="btn-comprar">Comprar por WhatsApp</button>
+        </div>
+
+    <script src="assets/java/carrito.js"></script>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Juan Alejandro</p>
+    </footer>
+    <link rel="stylesheet" href="">
+</body>
+</html>
