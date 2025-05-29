@@ -7,19 +7,32 @@
     <link rel="stylesheet" href="assets/styls/catalogo.css">
 </head>
 <body>
-    <header>
-        <nav class="nav-tortifruit">
-            <div class="nav-logo">
-                <img src="assets/img/Logo Tortifruit logo sin slogan.png" alt="Logo Tortifruit">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="assets/docs/conoceme.html">Conóceme</a></li>
-                <li><a href="assets/doc/Contacto.html"><strong>Chachafruto</strong></a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav class="nav-tortifruit">
+        <div class="nav-logo">
+            <img src="assets/img/Logo Tortifruit verde sin slogan.png" alt="Logo Tortifruit">
+        </div>
+
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="assets/docs/conoceme.html">Conóceme</a></li>
+        <li><a href="assets/docs/chachafruto.html">Chachafruto</a></li>
+        <li id="icono-carrito-mobile" class="icono-carrito mobile-only">
+            🛒 <span id="contador-carrito-mobile">0</span>
+        </li>
+    </ul>
+
+    <!-- Ícono carrito para escritorio -->
+        <div id="icono-carrito" class="icono-carrito desktop-only">
+            🛒 <span id="contador-carrito">0</span>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+</header>
+
     <main>
+</section>
         <!-- Sección 1: Familia de Frutas Naturales -->
         <section class="categoria">
             <h2 style="text-align: center;">Tortas de Frutas Naturales</h2>
@@ -55,7 +68,6 @@
                 <li><button data-nombre="Torta de Macadamia" data-precio="5000">Macadamia - $5.000</button></li>
                 <li><button data-nombre="Torta de Café" data-precio="5000">Café - $5.000</button></li>
                 <li><button data-nombre="Torta de Chocolo" data-precio="5000">Chocolo - $5.000</button></li>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aut itaque at aliquid error, dolor sequi ipsam iure ullam. Natus similique odit aut asperiores! Perferendis quos in necessitatibus impedit exercitationem.</p>
             </ul>
             </div>
         </section>
