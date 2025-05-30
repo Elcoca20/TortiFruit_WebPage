@@ -7,32 +7,64 @@
     <link rel="stylesheet" href="../styls/chachafruto.css">
 </head>
 <body>
-    <header>
-        <nav class="nav-tortifruit">
-            <div class="nav-logo">
-                <img src="../img/Logo Tortifruit logo sin slogan.png" alt="Logo Tortifruit">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="conoceme.html">Conóceme</a></li>
-                <li><a href="chachafruto.html">Chachafruto</a></li>
-            </ul>
-        </nav>
-    </header>
+ <header>
+    <nav class="nav-tortifruit">
+      <div class="nav-logo">
+        <img src="../img/Logo Tortifruit verde sin slogan.png" alt="Logo Tortifruit" />
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="conoceme.html">Conóceme</a></li>
+        <li><a href="chachafruto.html">Chachafruto</a></li>
+      </ul>
+    </nav>
+  </header>
     <main>
 <section class="video-tortifruit">
   <div class="video-wrapper">
     <iframe 
-      src="https://www.youtube.com/embed/1dyIQb1tvwE"
-      title="Video sobre el cultivo del chachafruto"
+      src="https://www.youtube.com/embed/IWJ1YagvbKs"
+      title="Video sobre el chachafruto"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+      allowfullscreen>
+    </iframe>
   </div>
-</section>
 </section>
 </div>
     </main>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Fade-in scroll animation
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>

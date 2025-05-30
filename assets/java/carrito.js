@@ -78,7 +78,7 @@ botonComprar.addEventListener("click", () => {
     }
     mensaje += `\nTotal a pagar: $${totalCarrito.toLocaleString()} COP`;
 
-    const url = `https://wa.me/573197336609?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://wa.me/573105371374?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
 });
 

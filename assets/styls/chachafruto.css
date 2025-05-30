@@ -22,61 +22,97 @@ body {
 
 /* Navegación */
 .nav-tortifruit {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e9fde4;
-    padding: 0.5rem 2rem;
-    position: relative;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9fde4;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-logo img {
-    height: 70px;
-    max-width: 100%;
-    object-fit: contain;
+  height: 70px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .nav-menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 .nav-menu a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #ddac79;
+  color: #ddac79;
 }
 
-/* Adaptabilidad del menú en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+main {
+  padding-top: 75px; /* Espacio para que el contenido no quede oculto por el nav */
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* === RESPONSIVE NAV === */
 @media (max-width: 768px) {
-    .nav-tortifruit {
-        flex-direction: column;
-        padding: 1rem;
-    }
+  .nav-tortifruit {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    padding: 1rem;
+  }
 
-    .nav-menu {
-        position: static;
-        transform: none;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-        gap: 1rem;
-    }
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
 
-    .nav-logo img {
-        height: 60px;
-    }
+  .nav-menu {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #e9fde4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 400px;
+    opacity: 1;
+  }
 }
 
 .video-tortifruit {
